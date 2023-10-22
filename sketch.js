@@ -1,84 +1,89 @@
-let particles = [];
-let bgColor;
 
+let particulas = []; 
+let foto;
 function setup() {
-  createCanvas(400, 400);
-  bgColor = color(75, 0, 130); 
+  createCanvas(windowWidth, windowHeight);
 
-  for (let i = 0; i < 100; i++) {
-    particles.push(new Particle());
+    
+  let cantidad = 1500; 
+  foto = loadImage("imagen2.png");
+  
+  
+  for(let i=0; i<cantidad; i++){
+    
+    let x = width/2;
+    let y = height/2;
+    
+    let colorfinal = foto.get(floor(x),floor(y));
+    
+    
+    particulas.push(new Particula(x,
+                            y,
+                             colorfinal,
+                             random(4)));
   }
+  
+  
 }
 
 function draw() {
-  background(bgColor);
-
-  for (let i = 0; i < particles.length; i++) {
-    particles[i].update();
-    particles[i].display();
-    for (let j = 0; j < particles.length; j++) {
-      if (i !== j) {
-        particles[i].checkCollision(particles[j]);
-      }
-    }
-  }
-}
-
-function mousePressed() {
+ // background(220);
   
-  bgColor = color(random(255), random(255), random(255));
+  //image(foto,0,0,width,height);
+  
+  for(let i=0; i<particulas.length; i++){
+    particulas[i].display();
+  }
+  
+  
 }
 
-class Particle {
-  constructor() {
-    this.x = random(width);
-    this.y = random(height);
-    this.size = random(10, 30);
-    this.age = 0;
-    this.maxAge = random(100, 500);
-    this.opacity = 255;
-    this.angle = random(TWO_PI);
-    this.rotationSpeed = random(5, 5);
-    this.xOff = random(1000);
-    this.yOff = random(2000);
-    this.color = color(255); 
-  }
 
-  update() {
-    this.age++;
-    this.opacity = map(this.age, 0, this.maxAge, 255, 0);
-    this.angle += this.rotationSpeed;
 
-    const noiseX = noise(this.xOff);
-    const noiseY = noise(this.yOff);
-    const vx = map(noiseX, 0, 1, -2, 2);
-    const vy = map(noiseY, 0, 1, -2, 2);
-
-    this.x += vx;
-    this.y += vy;
-
-    this.x = constrain(this.x, 0, width);
-    this.y = constrain(this.y, 0, height);
-
-    this.xOff += 0.01;
-    this.yOff += 0.01;
-  }
-
-  display() {
-    fill(this.color, this.opacity); 
+class Particula {
+  
+  constructor(_x,_y,_color,_s){
+    
+    
+    this.x = _x; //posicion en x
+    this.y = _y; //posicion en y
+    this.speedx = random(-1,1);
+    
+    
+    this.speedy = random(-1,1);
+    this.col = _color; 
+    this.size = _s; 
+  }  
+  
+  display(){
+    this.x+=this.speedx;
+    this.y+=this.speedy;
     noStroke();
-    push();
-    translate(this.x, this.y);
-    rotate(this.angle);
-    ellipse(0, 0, this.size, this.size);
-    pop();
-  }
-
-  checkCollision(other) {
-    let d = dist(this.x, this.y, other.x, other.y);
-    if (d < this.size / 2 + other.size / 2) {
-      // Cambiar el color al chocar
-      this.color = color(random(255), random(255), random(255));
+    
+    let colorfoto = color(foto.get(floor(this.x),floor(this.y)));
+    let color2 = color(0);
+    let d = dist(width/2,height/2,this.x,this.y);
+    d = map(d,0,width/2,0,1);
+    let colorfinal = lerpColor(colorfoto,color2,d);
+    fill(colorfinal);
+    circle(this.x,this.y,this.size);
+    
+    
+    if(this.x > width){
+      this.x = 0;
+    }
+    
+    if(this.x < 0){
+      this.x = width;
+    }
+    if(this.y < 0){
+      this.y = height;
+    }
+    if(this.y < 0){
+      this.y = width;
     }
   }
+  
+  
+
 }
