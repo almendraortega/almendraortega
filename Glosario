@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosario</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        header, section, footer {
+            max-width: 600px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+        }
+    </style>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</head>
+<body>
+    <header>
+        <h1>Glosario</h1>
+    </header>
+    
+    <section>
+        <h2>ARRAY </h2>
+        <p>Un array, en programación, es una estructura de datos que almacena una colección ordenada de elementos
+            La idea fundamental es que puedes almacenar varios valores bajo un mismo nombre y acceder a esos valores mediante su posición en el array.</p>
+    </section>
+
+    <section>
+        <h2>INSTANCIAS</h2>
+        <p>Es la creación de un objeto a partir de una clase. Una instancia puede tener o va a tener estado, comportamiento e identidad. 
+            El estado va a representar los valores de cada característica o atributo del objeto.
+            es como un molde.</p>
+    </section>
+
+    <section>
+        <h2>ITERACION</h2>
+        <p>En programación, una iteración se refiere a la repetición de un conjunto de instrucciones o un bloque de código en un programa. 
+            Es una forma de ejecutar una serie de declaraciones varias veces, generalmente hasta que se cumple una condición específica.</p>
+    </section>
+    
+    <section>
+        <h2>TRUE</h2>
+        <p>En programación, el valor true representa la afirmación de una condición o la activación de una característica.</p>
+    </section>
+    
+    <!-- El enlace debe estar fuera de la sección -->
+    <a href="index.html">Glosario</a>
+
+    
+    <footer>
+        <p>© 2023 Tu Nombre o Nombre de tu Sitio</p>
+    </footer>
+    
