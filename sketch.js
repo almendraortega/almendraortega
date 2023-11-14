@@ -1,89 +1,49 @@
+let estrellas = [];
 
-let particulas = []; 
-let foto;
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-
-    
-  let cantidad = 1500; 
-  foto = loadImage("imagen2.png");
-  
-  
-  for(let i=0; i<cantidad; i++){
-    
-    let x = width/2;
-    let y = height/2;
-    
-    let colorfinal = foto.get(floor(x),floor(y));
-    
-    
-    particulas.push(new Particula(x,
-                            y,
-                             colorfinal,
-                             random(4)));
-  }
-  
-  
+  createCanvas(400, 400);
 }
 
 function draw() {
- // background(220);
-  
-  //image(foto,0,0,width,height);
-  
-  for(let i=0; i<particulas.length; i++){
-    particulas[i].display();
+  background(147, 112, 219);
+
+  for (let estrella of estrellas) {
+    estrella.mostrar();
   }
-  
-  
 }
 
+function mouseClicked() {
+  let x = mouseX;
+  let y = mouseY;
+  let estrella = new Estrella(x, y);
+  estrellas.push(estrella);
+}
 
+class Estrella {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.size = random(10, 20);
+  }
 
-class Particula {
-  
-  constructor(_x,_y,_color,_s){
-    
-    
-    this.x = _x; //posicion en x
-    this.y = _y; //posicion en y
-    this.speedx = random(-1,1);
-    
-    
-    this.speedy = random(-1,1);
-    this.col = _color; 
-    this.size = _s; 
-  }  
-  
-  display(){
-    this.x+=this.speedx;
-    this.y+=this.speedy;
+  mostrar() {
+    fill(255); // Color blanco para la estrella
     noStroke();
-    
-    let colorfoto = color(foto.get(floor(this.x),floor(this.y)));
-    let color2 = color(0);
-    let d = dist(width/2,height/2,this.x,this.y);
-    d = map(d,0,width/2,0,1);
-    let colorfinal = lerpColor(colorfoto,color2,d);
-    fill(colorfinal);
-    circle(this.x,this.y,this.size);
-    
-    
-    if(this.x > width){
-      this.x = 0;
-    }
-    
-    if(this.x < 0){
-      this.x = width;
-    }
-    if(this.y < 0){
-      this.y = height;
-    }
-    if(this.y < 0){
-      this.y = width;
-    }
-  }
-  
-  
 
+    // Dibuja una estrella de cinco puntas
+    beginShape();
+    for (let i = 0; i < 5; i++) {
+      let angle = TWO_PI * i / 5 - HALF_PI;
+      let x = this.x + cos(angle) * this.size;
+      let y = this.y + sin(angle) * this.size;
+      vertex(x, y);
+      let spikeSize = this.size * 0.6;
+      x = this.x + cos(angle + PI / 5) * spikeSize;
+      y = this.y + sin(angle + PI / 5) * spikeSize;
+      vertex(x, y);
+    }
+    endShape(CLOSE);
+  }
 }
+
+
