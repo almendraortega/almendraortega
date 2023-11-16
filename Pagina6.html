@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Imagen Escrita 2023</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white; 
+      color: black; 
+    }
+
+    .header {
+      background-color:#FF21D3 ;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .info-box {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color:#FFCDF5   ; 
+  color: black; 
+  max-width: 50%;
+  margin-top: 390px; /* Ajuste del margen superior */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-box h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+    
+
+    .image-container {
+      max-width: 24%;
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .enlace-glosario {
+      color: white;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .codigo-section {
+      max-width: 24%;
+      margin-left: 20px;
+      background-color: white; 
+      color: black; 
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .codigo-section h1 {
+      font-size: 22px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .codigo-section p {
+      color: black; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Funciones para el codigo </h1>
+  </div>
+
+  <div class="center-container">
+    <div class="content-container">
+      <div class="info-box">
+       
+        <h1><a href=https://editor.p5js.org/almendraortega/sketches/38ZfzJ_FZ >Codigo </a></h1>
+        
+        <h1> Función setup </h1> 
+        <p>Se crea un arreglo llamado particulas.
+            <p> Se establece el canvas para ocupar toda la ventana del navegador
+                (windowWidth, windowHeight)
+                <p> Se define la cantidad de partículas y se crea cada partícula con una posición y color aleatorio.
+                
+                    <h1>Function draw</h1>  
+          <p> se recorre el arreglo de partículas y se llama al método display() de cada una para mostrarlas en el lienzo.
+        
+            
+            <h1>Cambio de Color al hacer "Click" </h1>  
+         <p>Cuando se presiona el ratón (mousePressed()), 
+            <p>Se recorren todas las partículas y se llama al método cambiarColor(), que asigna un nuevo color aleatorio a cada partícula.
+
+           
+            <h1>Display </h1>  
+            <p>Actualiza la posición, envuelve la partícula alrededor del lienzo y la dibuja.
+                <p>Es la rutina que cada partícula sigue para actualizar su posición, asegurarse de que no se escape de la pantalla y mostrar su presencia en el lienzo.
+                    
+                    
+
+        </p>
+        
+        <a href="index.html">Volver al portafolio</a>
+      </div>
+    </div>
+
+    <div class="codigo-section">
+      
+    </div>
+  </div>
+
+</body>
+</html>

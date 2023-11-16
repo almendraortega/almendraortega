@@ -1,15 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
+<head>
+  <title>Imagen Escrita 2023</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      }
+    
 
-  </head>
-  <body>
+    .header {
+      background-color:#9219DE ;
+      color:white;
+      text-align: center;
+      padding: 1em;
+     
+    }
+
+
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .info-box {
+      text-align:center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color:#DAA9F9  ;
+      color:#F9F5FF;
+      max-width: 24%;
+      margin-right: 20px; 
+      
+      
+    }
+
+    .info-box h1 {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .image-container {
+      max-width: 28%; 
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 10px; 
+    }
+
+   
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Mi Portafolio</h1>
+    <p>Almendra Ortega</p>
+    <nav>
+      <a href="https://github.com/almendraortega/tarea-imagen-escrita">github</a> |
+      <a href="https://wiki.ead.pucv.cl/Almendra_Ortega">wiki</a> 
+    </nav>
+  </div>
+
+  
+  <div class="center-container">
+
+  
+    <div class="info-box">
+      <h1>Sobre mí</h1>
+      <p>Nacionalidad: Chilena</p>
+      <p>Universidad: Pontificia Universidad Católica de Valparaíso</p>
+      <p>Escuela: Arquitectura y Diseño</p>
+      <p>Carrera: Diseño</p>
+      <p>Año: Primer año</p>
+      <p>Ciudad: San Felipe</p>
+      <p>Dato random: Soy alergica a los animales pero tengo 3 mascotas dos gatos,uno se llama "Kuro"  el otro "Jon Snow" y una perrita llamada linda.
+        Los tres son negros con manchas blancas
+      </p>
+    </div>
+
+   
+    <div class="image-container">
+      <a href="nombre_carpeta_tarea_1/">
+        <img src="https://drive.google.com/uc?id=1_cxxPAd3CjLwAY29NTQA4B-N58NGCnii" alt="Almendra Ignacia">
+      </a>
+    </div>
+  </div>
+
+  <div class="content">
+  <div class="row">
+    <div class="column">
+      <br>
+      <p>En este primer sketch te presento un código que crea un lienzo y permite agregar estrellas haciendo clic en él. 
+        Cada estrella es un "Objeto" y se dibuja como una estrella de cinco puntas en el lienzo. 
+        La posición y tamaño de cada estrella son aleatorios
+        <br> 
+        <a href="Codigo.html">Funciones </a> 
+      </p>
+    </div>
+
+    <div class="column">
+      <br>
+      <img src="img/1.PNG" alt="For anidado"  width="60%">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <br>
+      <p>En este segundo sketch te presento un código que crea un sistema de partículas donde cada partícula se mueve de manera aleatoria influenciada por el ruido de Perlin. 
+        El programa inicializa un lienzo, crea un conjunto de partículas, las actualiza y las muestra en el lienzo en cada iteración.
+        <br>
+        <a href="Untitled-1.html">Funciones </a> 
+      </p>
+    </div>
+
+    <div class="column">
+      <br>
+      <img src="img/2.PNG" alt="For anidado"  width="60%">
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  
+    <div class="content">
+      <div class="row">
+        <div class="column">
+          <br>
+          <p>En este tercer sketch te presento un código que crea un lienzo con estrellas en movimiento de fondo. 
+            Utiliza controles deslizantes y botones para ajustar la velocidad y controlar la visibilidad 
+            y movimiento de las estrellas de fondo y creando la constelación de Orión.
+            <br>
+            <a href="Encargo 3.html">Funciones </a> 
+          </p>
+        </div>
+    
+        <div class="column">
+          <br>
+          <img src="img/3.PNG" alt="For anidado"  width="60%">
+        </div>
+      </div>
+    </div>
+    
+    <div class="content">
+      <div class="row">
+        <div class="column">
+          <br>
+          <p>En este cuarto sketch te presento un código que simula copos de nieve cayendo. En el inicio, se crean 100 copos aleatorios.
+            En cada fotograma, los copos caen, se muestran y se eliminan las que han llegado al suelo. 
+            El número total de copos se controla con un deslizador.
+            <br>
+            <a href="Pagina 4.html">Funciones </a> 
+          </p>
+        </div>
+    
+        <div class="column">
+          <br>
+          <img src="img/4.PNG" alt="For anidado" width="60%">
+        </div>
+      </div>
+    </div>
+    
+      </div>
+    </div>
+  
+    <div class="content">
+      <div class="row">
+        <div class="column">
+          <br>
+          <p>En este quinto sketch te presento un código que crea un sistema de partículas interactivo 
+            donde las partículas se mueven por el lienzo y su color está influenciado por los colores de una imagen cargada. 
+            Las partículas se generan al inicio y se mueven continuamente, creando una animación visual.
+            <br>
+            <a href="Pagina 5.html">Funciones </a> 
+          </p>
+        </div>
+    
+        <div class="column">
+          <br>
+          <img src="img/5.PNG" alt="For anidado" width="60%">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <br>
+          <p>En este sexto sketch te presento un código que crea un efecto de partículas en un lienzo.
+            Se generan partículas con posiciones, colores y velocidades aleatorias. 
+            Al hacer "Click", todas las partículas cambian a colores aleatorios. 
+            La clase "Particula" define la estructura y comportamiento de cada partícula. 
+            La clase Particula actúa como un "molde" o una "plantilla" para crear cada una de las partículas en el programa.
+            <br>
+            <a href="Pagina6.html">Funciones </a> 
+          </p>
+        </div>
+    
+        <div class="column">
+          <br>
+          <img src="img/6.PNG" alt="For anidado" width="60%">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <br>
+          <p>En este séptimo sketch te presento un código que crea un sistema de partículas en un lienzo, 
+            donde las partículas se mueven de manera aleatoria y cambian de color al colisionar.
+            Al hacer "Click", el fondo cambia de color. La esencia del funcionamiento se encuentra dentro de la clase Particle, 
+            donde se establece cómo cada partícula se comporta de manera única.
+            <br>
+            <a href="Pagina 7.html">Funciones </a> 
+          </p>
+        </div>
+    
+        <div class="column">
+          <br>
+          <img src="img/7.PNG" alt="Sketch 7" width="60%">
+        </div>
+      </div>
+    </div>
+
+      </p></div>
+
+      </div>
+      <div class="row">
+        <div class="column">
+         
+          <!DOCTYPE html>
+<html lang="es">
+<head>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+</head>
+<body>
+ 
+
+    <header>
+   
+    </header>
+
     <main>
+  
     </main>
-    <script src="sketch.js"></script>
+
+    <footer>
+    
+    </footer>
+
+
+    </div>
+    <footer>
+   <p>Almendra Ortega, estudiante pucv
+    </footer>
+  
   </body>
-</html>
+  </html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Imagen Escrita 2023</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white; 
+      color: black; 
+    }
+
+    .header {
+      background-color: #BC10F4 ;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .info-box {
+  text-align:center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color:#EFC7FF ; 
+  color: black; 
+  max-width: 50%;
+  margin-top: 690px; /* Ajuste del margen superior */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-box h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+    
+
+    .image-container {
+      max-width: 24%;
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .enlace-glosario {
+      color: white;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .codigo-section {
+      max-width: 24%;
+      margin-left: 20px;
+      background-color: white; 
+      color: black; 
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .codigo-section h1 {
+      font-size: 22px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .codigo-section p {
+      color: black; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Funciones para el codigo </h1>
+  </div>
+
+  <div class="center-container">
+    <div class="content-container">
+      <div class="info-box">
+       
+        <h1><a href="https://editor.p5js.org/almendraortega/sketches/Z1prjbPYP" >Codigo </a></h1>
+        
+        <h1> Función setup</h1> 
+        <p>Se ejecuta al principio.En este caso, crea un lienzo (canvas) de 400x400 píxeles.
+        <p>Se inicializan arreglos stars y orionStars para almacenar las coordenadas de las estrellas.
+
+
+        <h1> speedSlider </h1>  
+          <p>Se crea un control deslizante para ajustar la velocidad de movimiento de las estrellas de fondo.
+             Se crean dos botones:
+          <p> Uno para alternar la visibilidad de la constelación de Orión (drawOrionButton).
+          <p> Otro para activar/desactivar el movimiento de las estrellas de fondo (moveBackgroundButton).
+          
+         <h1>Fondo </h1>  
+         <p>Se generan 200 estrellas aleatorias y se almacenan en el arreglo stars.
+   
+         <h1>Cordenadas </h1> 
+         <p> Definir las coordenadas de las estrellas de Orión
+   
+         <h1>toggleOrion</h1> 
+        <p> Invierte el estado de drawOrion, controlando la visibilidad de la constelación.
+   
+         <h1>toggleBackgroundMovement</h1>  
+         <p>Invierte el estado de movingBackground, controlando el movimiento de las estrellas de fondo.
+        
+        <h1> Función draw</h1> 
+         <p>Se obtiene el valor del deslizador de velocidad (speedSlider).
+          Se mueven las estrellas de fondo aleatoriamente 
+          Se dibujan las estrellas de fondo y, si drawOrion es <a href="Glosario.html">true</a>, se dibuja la constelación de Orión.
+       
+        </p>
+        
+        <a href="index.html">Volver al portafolio</a>
+      </div>
+    </div>
+
+    <div class="codigo-section">
+      
+    </div>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,137 @@
+Encarg<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Imagen Escrita 2023</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white; 
+      color: black; 
+    }
+
+    .header {
+      background-color: #9219DE;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .info-box {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #DAA9F9; 
+  color: white; 
+  max-width: 50%;
+  margin-top: 450px; /* Ajuste del margen superior */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-box h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+    
+
+    .image-container {
+      max-width: 24%;
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .enlace-glosario {
+      color: white;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .codigo-section {
+      max-width: 24%;
+      margin-left: 20px;
+      background-color: white; 
+      color: black; 
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .codigo-section h1 {
+      font-size: 22px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .codigo-section p {
+      color: black; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Funciones para el codigo </h1>
+  </div>
+
+  <div class="center-container">
+    <div class="content-container">
+      <div class="info-box">
+       
+        <h1><a href="https://editor.p5js.org/almendraortega/sketches/VKVTvFHAL" >Codigo </a></h1>
+        <h1> Declaración del Array</h1> 
+        <p>Se declara un array llamado estrellas, el cual almacenará objetos de la clase Estrella, que sirve como un molde para las estrellas.
+
+        <h1> Función setup </h1>  
+        <p> La función setup() se ejecuta al principio. En este caso, crea un lienzo (canvas) de 400x400 píxeles.
+
+         <h1> Función draw</h1>  
+         <p>La función draw se ejecuta continuamente. Esta función establece el fondo del lienzo y luego recorre el array estrellas, llamando al método mostrar() de cada objeto Estrella.
+   
+         <h1> Función mouseClicked</h1> 
+         <p>Esta función se ejecuta cada vez que se hace clic en el lienzo. Obtiene las coordenadas del clic, crea una nueva instancia de la clase Estrella en esas coordenadas y la agrega al array estrellas.
+   
+         <h1>Clase Estrella</h1> 
+        <p> Define la clase Estrella. Cada instancia de esta clase representa una estrella en el lienzo.
+   
+         <h1> Constructor</h1>  
+         <p>Establece las coordenadas iniciales (x e y) y un tamaño aleatorio para cada estrella.
+        
+        <h1> Método mostrar</h1> 
+         <p>Dibuja una estrella de cinco puntas en las coordenadas del objeto. Utiliza las funciones beginShape() y endShape(CLOSE) para definir la forma de la estrella. Un bucle for calcula las coordenadas de los vértices y puntas de la estrella.
+       
+        </p>
+        
+        <a href="index.html">Volver al portafolio</a>
+      </div>
+    </div>
+
+    <div class="codigo-section">
+      
+    </div>
+  </div>
+
+</body>
+</html>

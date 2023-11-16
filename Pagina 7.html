@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Imagen Escrita 2023</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white; 
+      color: black; 
+    }
+
+    .header {
+      background-color:#883BFF  ;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .info-box {
+  text-align:center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color:#E3D1FF    ; 
+  color: black; 
+  max-width: 50%;
+  margin-top: 780px; /* Ajuste del margen superior */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-box h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+    
+
+    .image-container {
+      max-width: 24%;
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .enlace-glosario {
+      color: white;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .codigo-section {
+      max-width: 24%;
+      margin-left: 20px;
+      background-color: white; 
+      color: black; 
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .codigo-section h1 {
+      font-size: 22px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .codigo-section p {
+      color: black; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Funciones para el codigo </h1>
+  </div>
+
+  <div class="center-container">
+    <div class="content-container">
+      <div class="info-box">
+       
+        <h1><a href=https://editor.p5js.org/almendraortega/sketches/dYcbEcXiV >Codigo </a></h1>
+        
+        <h1> Función setup </h1> 
+        <p>Crea un lienzo (canvas) de 400x400 píxeles.
+            <p> Se define el color de fondo (bgColor) en este caso un tono de morado.
+                <p> Se crea un <a href="Glosario.html">array</a> llamado particles para almacenar el objeto de la clase Particle.
+                <p>Se generan 100 partículas y se añaden al array
+                
+            
+                
+                    <h1>Function draw</h1>  
+          <p> background(bgColor)
+            <p> La función draw se llama continuamente para animar las partículas.
+                <p>   Se actualiza y muestra cada partícula en el array(Coleccion)
+                    <p>  Se verifica la colisión entre las partículas, cambiando el color en caso de colisión.
+        
+            
+            <h1>Cambio de Color  </h1>  
+         <p>Cuando se presiona el ratón (mousePressed()), 
+            <p>Se recorren todas las partículas y se llama al método cambiarColor(), que asigna un nuevo color aleatorio a cada partícula.
+                <p>Cuando se hace "Click", el color de fondo (bgColor) se cambia a uno aleatorio.
+           
+            <h1>function mousePressed() </h1> 
+          
+              <p>Cada partícula tiene posición, tamaño, edad, color, etc.
+                
+                <p> Se actualiza la posición y propiedades de la partícula en el método update.
+                
+                    <p> Se muestra visualmente la partícula en el lienzo en el método display.
+                
+                      <p>Se verifica la colisión con otra partícula en el método checkCollision.
+                
+              
+
+        </p>
+        
+        <a href="index.html">Volver al portafolio</a>
+      </div>
+    </div>
+
+    <div class="codigo-section">
+      
+    </div>
+  </div>
+
+</body>
+</html>
